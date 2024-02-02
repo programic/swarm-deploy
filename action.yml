@@ -1,0 +1,12 @@
+name: Swarm deploy
+description: Deploy a stack to a swarm with a Portainer webhook
+inputs:
+  webhook_url:
+    description: 'The URL of the Portainer webhook'
+    required: true
+  dotenv_path:
+    description: 'The .env file to use'
+    required: false
+runs:
+  using: node20
+  main: dist/index.js
